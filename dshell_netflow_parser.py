@@ -43,9 +43,9 @@ def run_tool(path):
                 rec = rec.strip()
                 fields = rec.split()
                 try:
-                    data["date"] = fields[0].strip()
+                    #data["date"] = fields[0].strip()
                     data["time"] = fields[1].strip()
-                    data['date_time'] = " ".join([data["date"], data['time']])
+                    data['date'] = " ".join([fields[0].strip(), data['time']])
                     data["src_ip"] = fields[2].strip()
                     data["dst_ip"] = fields[4].strip()
                     data["src_country_code"] = fields[5].strip()[1:]
